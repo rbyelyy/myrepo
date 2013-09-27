@@ -1,0 +1,24 @@
+<?php
+require "/home/selenium/facebook/php-webdriver/lib/__init__.php";
+class SampleTest extends PHPUnit_Framework_TestCase
+{
+  protected $session;
+ 
+  public function test_sample() {
+  $this->web_driver = new RemoteWebDriver(
+    "http://localhost:4444/wd/hub",
+    array("platform"=>"WINDOWS", "browserName"=>"firefox")
+  );
+  $this->web_driver->get("http://google.com");
+  print $this->web_driver->getTitle();
+
+  $element = $this->web_driver->findElement(WebDriverBy::name("q"));
+  if($element) {
+    $element->sendKeys("BrowserStack");
+    $element->submit();
+  }
+  print "\n" . $this->web_driver->getTitle();
+  $this->web_driver->quit();
+}
+}
+?>
