@@ -6,6 +6,7 @@
 # Build steps: export DISPLAY=:99
 # Build step: phpunit --log-junit /var/lib/jenkins/jobs/test/workspace/junit.xml --coverage-clover /var/lib/jenkins/jobs/test/workspace/coverage.xml /home/selenium/facebook/php-webdriver/example.php
 # Path to Junit file starting from "/var/lib/jenkins/jobs/test/workspace/".
+# Commands after re-start: service selenium start, sudo service xvfb start, export DISPLAY=:99, x11vnc -display :99
 echo "Would you like to install Jenkins(yes/no)?"
 read JENKINS
 echo "Would you like to install kate IDE(yes/no)?"
