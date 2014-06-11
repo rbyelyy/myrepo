@@ -85,7 +85,7 @@ fi
 if [ $SELENIUM = "yes" ]; then
   sudo mkdir /usr/local/lib/selenium
   cd /usr/local/lib/selenium
-  sudo wget http://selenium.googlecode.com/files/selenium-server-standalone-2.35.0.jar
+  sudo wget http://selenium-release.storage.googleapis.com/2.42/selenium-server-standalone-2.42.2.jar
   sudo mkdir -p /var/log/selenium/
   sudo chmod a+w /var/log/selenium/
   curl https://raw.github.com/rbyelyy/myrepo/master/selenium_script > /home/selenium/selenium
