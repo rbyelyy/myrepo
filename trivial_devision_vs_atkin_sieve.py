@@ -101,6 +101,7 @@ if __name__ == "__main__":
         if is_primary_trivial_division(i) != 0:
             division_numbers.append(i)
         i += 1
+
     # atkin method
     print sum(division_numbers)
     print sum(is_primary_atkin(7920))
