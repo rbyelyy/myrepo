@@ -93,9 +93,6 @@ def is_primary_atkin(n):
     return [2, 3] + primes
 
 
-
-
-
 if __name__ == "__main__":
     # trivial division
     i = 8
@@ -105,8 +102,8 @@ if __name__ == "__main__":
             division_numbers.append(i)
         i += 1
     # atkin method
-    print division_numbers
-    print is_primary_atkin(7920)
+    print sum(division_numbers)
+    print sum(is_primary_atkin(7920))
 
 
 
