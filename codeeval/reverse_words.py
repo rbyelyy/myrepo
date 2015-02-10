@@ -9,7 +9,7 @@ def read_from_file(path):
     :rtype : object
     """
     with open(path, 'r') as infile:
-        return [i.replace('\n', '').split(' ') for i in infile]
+        return [_.replace('\n', '').split(' ') for _ in infile]
 
 
 def reverse_words(words_list):
@@ -17,7 +17,7 @@ def reverse_words(words_list):
     Return reversed list of words
     :rtype : object
     """
-    return [reversed(j) for j in [i for i in words_list]]
+    return [reversed(_) for _ in [_ for _ in words_list]]
 
 
 if __name__ == "__main__":
