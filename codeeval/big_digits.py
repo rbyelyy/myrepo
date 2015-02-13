@@ -59,10 +59,3 @@ if __name__ == "__main__":
             i = i.translate(None, '"\'-.:\n')
             for digit in convert_to_big_digit(i):
                     print digit
-
-
-
-
-
-
-
