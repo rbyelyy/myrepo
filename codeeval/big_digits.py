@@ -31,13 +31,17 @@ def convert_characters():
     return digits_set
 
 
-def collect_big_digit(number_for_printing):
+def convert_to_big_digit(str_of_numbers):
     collecting_tmp_var = []
+    line_counter = ''
     for line in convert_characters():
-        collecting_tmp_var.append(line[(((4 * (number_for_printing + 1)) + number_for_printing) - 4):(
-            (4 * (number_for_printing + 1)) + number_for_printing)] + '-')
+        for i in str_of_numbers:
+            i = i.translate(None, ' -.:')
+            i = int(i)
+            line_counter += line[(((4 * (i + 1)) + i) - 4):((4 * (i + 1)) + i)] + '-'
+        collecting_tmp_var.append(line_counter)
+        line_counter = ''
     return collecting_tmp_var
-
 
 
 def prepare_data_from_file():
@@ -54,14 +58,17 @@ def prepare_data_from_file():
     return tmp_formated_number
 
 if __name__ == "__main__":
-        t = []
-        t.append(collect_big_digit(3))
-        t.append(collect_big_digit(6))
-        t.append('\n')
-        t.append(collect_big_digit(7))
-        t.append(collect_big_digit(8))
 
-        print t
+        file_content = read_from_file('/Users/rbyelly/Downloads/sandbox/myrepo/codeeval/numbers')
+        for i in file_content:
+            if '\n' in i:
+                i = i[:-1]
+            elif '-' or '.' or '_':
+                i = i.translate(None, ' -.:')
+            for k in convert_to_big_digit(i):
+                    print k
+
+
 
 
         # for line in tmp_formated_number:
