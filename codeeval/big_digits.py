@@ -1,8 +1,5 @@
 # coding=utf-8
 import sys
-import collections
-import re
-import string
 
 
 def read_from_file(path):
@@ -32,16 +29,15 @@ def convert_characters():
 
 
 def convert_to_big_digit(str_of_numbers):
-    collecting_tmp_var = []
+    number_lines = []
     line_counter = ''
     for line in convert_characters():
-        for i in str_of_numbers:
-            i = i.translate(None, ' -.:')
-            i = int(i)
-            line_counter += line[(((4 * (i + 1)) + i) - 4):((4 * (i + 1)) + i)] + '-'
-        collecting_tmp_var.append(line_counter)
+        for slice_position in str_of_numbers:
+            slice_position = int(slice_position)
+            line_counter += line[(((4 * (slice_position + 1)) + slice_position) - 4):((4 * (slice_position + 1)) + slice_position)] + '-'
+        number_lines.append(line_counter)
         line_counter = ''
-    return collecting_tmp_var
+    return number_lines
 
 
 def prepare_data_from_file():
@@ -58,27 +54,13 @@ def prepare_data_from_file():
     return tmp_formated_number
 
 if __name__ == "__main__":
-
-        file_content = read_from_file('/Users/rbyelly/Downloads/sandbox/myrepo/codeeval/numbers')
+        file_content = read_from_file(sys.argv[1])
         for i in file_content:
-            if '\n' in i:
-                i = i[:-1]
-            elif '-' or '.' or '_':
-                i = i.translate(None, ' -.:')
-            for k in convert_to_big_digit(i):
-                    print k
+            i = i.translate(None, '"\'-.:\n')
+            for digit in convert_to_big_digit(i):
+                    print digit
 
 
-
-
-        # for line in tmp_formated_number:
-        # for m in convert_characters():
-        #         for n in tmp_formated_number:
-        #             if isinstance(n, int):
-        #                 final_number += m[(((4 * (n + 1)) + n) - 4):((4 * (n + 1)) + n)] + '-'
-        #         print final_number
-        #         final_number = ''
-        #     print '\n'
 
 
 
