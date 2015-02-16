@@ -29,33 +29,46 @@ def convert_characters():
 
 
 def convert_to_big_digit(str_of_numbers):
+    """
+    Convert integer into 5*6 cli pixels
+    :rtype : object
+    """
     number_lines = []
     line_counter = ''
     for line in convert_characters():
         for slice_position in str_of_numbers:
             slice_position = int(slice_position)
-            line_counter += line[(((4 * (slice_position + 1)) + slice_position) - 4):((4 * (slice_position + 1)) + slice_position)] + '-'
+            line_counter += line[(((4 * (slice_position + 1)) + slice_position) - 4):(
+                (4 * (slice_position + 1)) + slice_position)] + '-'
         number_lines.append(line_counter)
         line_counter = ''
     return number_lines
 
 
-def prepare_data_from_file():
-    tmp_formated_number = []
-    file_content = read_from_file('/Users/rbyelly/Downloads/sandbox/myrepo/codeeval/numbers')
-    for k, v in enumerate(file_content):
-        file_content[k] = v[:-1]
-        for i in v:
-            if '\n' not in i:
-                tmp_formated_number.append(int(i))
+def prepare_data_from_file(path):
+    """
+    Read from file and format data
+    :rtype : object
+    :param path: Path to the file
+    :return: Filtered and formatted data from file
+    """
+    tmp_formatted_number = []
+    content_of_file = read_from_file(path)
+    for k, v in enumerate(content_of_file):
+        content_of_file[k] = v[:-1]
+        for _ in v:
+            if '\n' not in _:
+                tmp_formatted_number.append(int(i))
             else:
-                tmp_formated_number.append(i)
+                tmp_formatted_number.append(i)
 
-    return tmp_formated_number
+    return tmp_formatted_number
+
 
 if __name__ == "__main__":
-        file_content = read_from_file(sys.argv[1])
-        for i in file_content:
-            i = i.translate(None, '"\'-.:\n')
-            for digit in convert_to_big_digit(i):
-                    print digit
+    file_content = read_from_file(sys.argv[1])
+    for i in file_content:
+        i = i.translate(None, '"\'>+-.:\n')
+        for digit in convert_to_big_digit(i):
+            assert isinstance(digit, str)
+            print digit
