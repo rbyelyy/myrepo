@@ -5,7 +5,7 @@ import itertools
 
 def is_primary_trivial_division(n):
     """
-    Trial division algorithm for primary numbers
+    Trial division algorithm for primary company_name_for_converting.txt
     Complexity: O(n1/2log2n)
     :param n: number for verification
     :return: primary if true and 0 if false
@@ -31,7 +31,7 @@ def equation_level_calculation(element_x, element_y):
 def create_pairs_of_numbers(n):
     """
     1. All prime from 1 to n
-    2. Taking all possible numbers  x, y, where x<=sqrt(n) и y<=sqrt(n).Ex: (1,1), (1,2),…,
+    2. Taking all possible company_name_for_converting.txt  x, company_name_for_converting, where x<=sqrt(n) и company_name_for_converting<=sqrt(n).Ex: (1,1), (1,2),…,
     (1,sqrt(n)), (2,1), (2,2),…, (sqrt(n),sqrt(n)).
 
     :rtype : list
@@ -43,7 +43,7 @@ def create_pairs_of_numbers(n):
 
 def pow_range(n):
     """
-    On the last phase we are checking that prime number do not have mod 0 for pow(x,2)  for all numbers from
+    On the last phase we are checking that prime number do not have mod 0 for pow(x,2)  for all company_name_for_converting.txt from
     5 до sqrt(n).
     :rtype : list
     """

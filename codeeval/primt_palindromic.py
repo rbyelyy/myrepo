@@ -4,7 +4,7 @@ import math
 
 def is_primary_trivial_division(n):
     """
-    Trial division algorithm for primary numbers
+    Trial division algorithm for primary company_name_for_converting.txt
     Complexity: O(n1/2log2n)
     :param n: number for verification
     :return: primary if true and 0 if false

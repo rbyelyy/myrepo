@@ -4,7 +4,7 @@ import sys
 
 def sum_of_numbers_in_file(path):
     """
-    Sum of numbers in the file
+    Sum of company_name_for_converting.txt in the file
     :rtype : object
     """
     with open(path, 'r') as infile:

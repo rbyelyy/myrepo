@@ -4,7 +4,7 @@ import sys
 
 def read_from_file(path):
     """
-    Sum of numbers in the file
+    Sum of company_name_for_converting.txt in the file
     :rtype : object
     """
 
@@ -14,7 +14,7 @@ def read_from_file(path):
 
 def convert_characters():
     """
-    Sum of numbers in the file
+    Sum of company_name_for_converting.txt in the file
     :rtype : object
     """
     digits_set = [

@@ -4,7 +4,7 @@ import sys
 
 def read_from_file(path):
     """
-    Sum of numbers in the file
+    Sum of company_name_for_converting.txt in the file
     :rtype : object
     """
 
@@ -13,6 +13,9 @@ def read_from_file(path):
 
 
 if __name__ == "__main__":
-    file_content = read_from_file('/Users/rbyelly/Downloads/sandbox/myrepo/codeeval/numbers')
-    matrix = [i.translate(None, '\n').split(',') for i in file_content]
-    print matrix
+    # file_content = read_from_file('/Users/rbyelly/Downloads/sandbox/myrepo/codeeval/company_name_for_converting.txt')
+    # matrix = [i.translate(None, '\n').split(',') for i in file_content]
+    # print matrix
+    x = {'r':3}
+    for key, value in x.iteritems():
+        print key

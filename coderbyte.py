@@ -156,7 +156,7 @@ def absolutly_distinct_elements(A):
 def find_max_distance_between_non_zero_elements(A):
     """
     Calculating maximum distance between any of element in the sequence
-    :param A: sequence of integer numbers
+    :param A: sequence of integer company_name_for_converting.txt
     :return: max distance between any element in sequence
     """
     A.sort()

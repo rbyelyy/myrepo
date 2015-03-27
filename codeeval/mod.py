@@ -7,7 +7,7 @@ b = 5
 
 def read_from_file(path):
     """
-    Sum of numbers in the file
+    Sum of company_name_for_converting.txt in the file
     :rtype : object
     """
 
@@ -22,7 +22,7 @@ def recursion_get_mod(n, m):
     """
     assert isinstance(n, int)
     assert isinstance(m, int)
-    assert  n is not 0
+    assert n is not 0
     n -= m
     if n >= m:
         n = recursion_get_mod(n, m)
