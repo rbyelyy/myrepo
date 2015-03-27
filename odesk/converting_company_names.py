@@ -6,7 +6,7 @@ import os
 import sys
 
 
-def download_clean_company_list(file_name, url):
+def download_nasdaq_company_list(file_name, url):
     response = urllib2.urlopen(url)
     with open(file_name, 'w') as f:
         f.write(response.read())
@@ -29,8 +29,9 @@ def levenshtein(word_one, word_two):
     for i, c1 in enumerate(word_one):
         current_row = [i + 1]
         for j, c2 in enumerate(word_two):
-            insertions = previous_row[j + 1] + 1 # j+1 instead of j since previous_row and current_row are one character longer
-            deletions = current_row[j] + 1       # than s2
+            insertions = previous_row[
+                             j + 1] + 1  # j+1 instead of j since previous_row and current_row are one character longer
+            deletions = current_row[j] + 1  # than s2
             substitutions = previous_row[j] + (c1 != c2)
             current_row.append(min(insertions, deletions, substitutions))
         previous_row = current_row
@@ -63,18 +64,21 @@ def create_clean_csv(mydict):
 if __name__ == "__main__":
     result = {}
     ticker_and_company = {}
-    download_clean_company_list(sys.argv[1], 'ftp://ftp.nasdaqtrader.com/SymbolDirectory/nasdaqlisted.txt')
-    y = get_dirty_company_list('y')
-    company_tickers = convert_data_to_dict('x')
-    for dirty_company_name in y:
+    download_nasdaq_company_list('company_name_from_nasdaq',
+                                 'ftp://ftp.nasdaqtrader.com/SymbolDirectory/nasdaqlisted.txt')
+    company_list_for_covert = get_dirty_company_list('company_name_for_converting')
+
+    get_company_tickers_from_nasdaq = convert_data_to_dict('company_name_from_nasdaq')
+
+    for dirty_company_name in company_list_for_covert:
         dirty_company_name = clean_up_string(dirty_company_name)
-        for key, value in company_tickers.items():
+        for key, value in get_company_tickers_from_nasdaq.items():
             value = clean_up_string(value)
             f = levenshtein(dirty_company_name, value)
             ticker_and_company[key] = f
         min_val = min(ticker_and_company.itervalues())
         ticker = [k for k, v in ticker_and_company.iteritems() if v == min_val]
-        result[ticker[0]] = company_tickers[ticker[0]]
+        result[ticker[0]] = get_company_tickers_from_nasdaq[ticker[0]]
         create_clean_csv(result)
 
 
