@@ -1,6 +1,5 @@
 # coding=utf-8
 import sys
-import itertools
 
 def read_from_file(path):
     """
@@ -10,43 +9,47 @@ def read_from_file(path):
     """
     with open(path, 'r') as infile:
         f = infile.readlines()
-        return [i.rstrip(' ') for i in f]
+        stripped = [i.strip() for i in f]
+        print stripped
+        return stripped
 
 
-def knight_moves(positions):
+def compare_points(positions):
     """
-    Return direction
+    Convert from positions to directions
     """
-    a = None
-    b = None
-    for i in positions:
-        line = i.replace(" ", "")
-        if line[0] == line[2] and line[1] == line[3]:
-            print 'here'
-        elif line[0] == line[2]:
-            if line[1] < line[3]:
-                print 'N'
-            else:
-                print 'S'
-        elif line[1] == line[3]:
-            if line[0] < line[2]:
-                print 'E'
-            else:
-                print 'W'
-        else:
-            if int(line[0]) > int(line[2]) :
-                a = 'W'
-            else:
-                a = 'E'
-            if int(line[1]) > int(line[3]):
-                b = 'S'
-            else:
-                b = 'N'
-        print a + b
-
+    if positions:
+        for i in positions:
+            i = i.split()
+            try:
+                i = [int(j) for j in i]
+            except ValueError:
+                exit("Cannot convert to Int")
+            if -10000 < (i[0] and i[1] and i[2] and i[3]) < 10000:
+                if i[0] == i[2] and i[1] == i[3]:
+                    print 'here'
+                elif i[0] == i[2]:
+                    if i[1] < i[3]:
+                        print 'N'
+                    else:
+                        print 'S'
+                elif i[1] == i[3]:
+                    if i[0] < i[2]:
+                        print 'E'
+                    else:
+                        print 'W'
+                else:
+                    if int(i[0]) > int(i[2]):
+                        x = 'W'
+                    else:
+                        x = 'E'
+                    if int(i[1]) > int(i[3]):
+                        y = 'S'
+                    else:
+                        y = 'N'
+                    print str(y) + str(x)
 
 
 if __name__ == "__main__":
-    list_of_words = read_from_file('ttt.txt')
-    knight_moves(list_of_words)
-
+    list_of_words = read_from_file(sys.argv[1])
+    compare_points(list_of_words)
