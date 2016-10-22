@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="145207b7-6a3d-4de6-bb30-288a2170b14f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/access_aws.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data_plot_bokeh.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/odesk/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sandbox.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/script/git_heroku.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/script/git_setup.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/script/jenkins_python_php_setup.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/script/selenium_script" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/script/xvfb_script" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/trade_company_name_task/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coderbyte.py" afterPath="$PROJECT_DIR$/coderbyte/coderbyte.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/odesk/company_name_for_converting" afterPath="$PROJECT_DIR$/trade_company_name_task/company_name_for_converting" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/selenium-webdriver-mocha/driver.js" afterPath="$PROJECT_DIR$/page-object-pattern-mocha/driver.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/selenium-webdriver-mocha/test_check_page_source.js" afterPath="$PROJECT_DIR$/page-object-pattern-mocha/test_check_page_source.js" />
-    </list>
+    <list default="true" id="145207b7-6a3d-4de6-bb30-288a2170b14f" name="Default" comment="" />
     <ignored path="simple_code_challenges.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -244,6 +229,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="145207b7-6a3d-4de6-bb30-288a2170b14f" name="Default" comment="" />
@@ -252,7 +240,7 @@
       <option name="presentableId" value="Default" />
       <updated>1477088159316</updated>
       <workItem from="1477088161189" duration="15604000" />
-      <workItem from="1477175546499" duration="157000" />
+      <workItem from="1477175546499" duration="196000" />
     </task>
     <task id="LOCAL-00001" summary="Add page object pattern schema to test run">
       <created>1477175165408</created>
@@ -304,7 +292,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15761000" />
+    <option name="totallyTimeSpent" value="15800000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
