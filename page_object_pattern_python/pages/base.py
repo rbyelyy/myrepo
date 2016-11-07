@@ -18,6 +18,9 @@ class Singleton(type):
 class Base(metaclass=Singleton):
 
     def __init__(self):
+        if hasattr(self, '_initialized'):
+            return
+        self._initialized = True
         self.driver = webdriver.Firefox()
         self.url = self.set_base_url()
         self.element_timeout = 10
