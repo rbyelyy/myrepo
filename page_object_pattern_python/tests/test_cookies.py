@@ -1,14 +1,14 @@
 import pytest
-from page_object_pattern_python.pages.base import Base
-from page_object_pattern_python.pages.home import Homepage
-
+from page_object_pattern_python.pages.home import HomePage
+from selenium import webdriver
 
 def teardown_module():
     pass
 
 
 if __name__ == "__main__":
-    homepage = Homepage()
+    driver = webdriver.Firefox()
+    homepage = HomePage(driver)
     homepage.navigate()
     homepage.wait_for_page_to_load()
     cookies_page = homepage.navigate_to_cookies_page()
