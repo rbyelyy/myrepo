@@ -1,6 +1,4 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.action_chains import ActionChains
 from page_object_pattern_python.pages.base import BasePage
 
 
@@ -15,8 +13,9 @@ class Cookies(BasePage):
         self.wait_for_element_xpath(self.logo)
 
     def move_to_cookies_settings(self):
+        self.wait_for_element_css(self.cookies_settings)
         element = self.driver.find_element(By.CSS_SELECTOR, self.cookies_settings)
-        element.click()
+        self.driver.execute_script("arguments[0].click();", element)
 
     def turn_off_functional_cookies(self):
         print('Turn off {0} element'.format(self.functional_cookies))

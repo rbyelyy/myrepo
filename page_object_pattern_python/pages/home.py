@@ -9,7 +9,7 @@ class HomePage(BasePage):
     signin_button = '//*[@id="idcta-username"]'
     cookies_link = '#orb-contentinfo > div > ul > li.orb-footer-cookies > a'
 
-    def wait_for_page_to_load(self):
+    def wait_for_element_on_the_page(self):
         self.wait_for_element_xpath(self.signin_button)
 
     def navigate_to_cookies_page(self):
