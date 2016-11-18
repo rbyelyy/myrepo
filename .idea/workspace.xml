@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="145207b7-6a3d-4de6-bb30-288a2170b14f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/interview_test_task/first_task/drupal7 and CiviCRM .png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/interview_test_task/first_task/t_sql_test.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/interview_test_task/second_task/CiviCRM_TestCases.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/interview_test_task/second_task/CiviCRM_TestPlan.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/selenium_sample/php_facebook_test" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/selenium_sample/python_google_test" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/trade_company_name_task/__init__.py" afterPath="$PROJECT_DIR$/company_name_levenshtein_distance/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/trade_company_name_task/company_name_for_converting" afterPath="$PROJECT_DIR$/company_name_levenshtein_distance/company_name_for_converting" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/trade_company_name_task/converting_company_names.py" afterPath="$PROJECT_DIR$/company_name_levenshtein_distance/converting_company_names.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="simple_code_challenges.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,13 +75,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="converting_company_names.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="converting_company_names.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/company_name_levenshtein_distance/converting_company_names.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
               <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="80" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="30">
+                <caret line="2" column="69" selection-start-line="2" selection-start-column="69" selection-end-line="2" selection-end-column="69" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownFxPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -149,6 +156,7 @@
         <option value="$PROJECT_DIR$/page_object_pattern_python/tests/test_example.py" />
         <option value="$PROJECT_DIR$/page_object_pattern_python/setup.py" />
         <option value="$PROJECT_DIR$/page_object_pattern_python/README.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -481,7 +489,21 @@
       <option name="project" value="LOCAL" />
       <updated>1479482641373</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Remove out of date folders">
+      <created>1479482784907</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1479482784907</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Minor changes">
+      <created>1479482821368</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1479482821368</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -578,7 +600,9 @@
     <MESSAGE value="Add POM for Cookies page" />
     <MESSAGE value="Update navigate to method" />
     <MESSAGE value="Add 'pytest' support and factory pattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add 'pytest' support and factory pattern" />
+    <MESSAGE value="Remove out of date folders" />
+    <MESSAGE value="Minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -987,6 +1011,20 @@
           <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="80" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="69" selection-start-line="2" selection-start-column="69" selection-end-line="2" selection-end-column="69" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>
