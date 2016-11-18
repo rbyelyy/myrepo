@@ -1,4 +1,9 @@
-**_~~How to start~~_**
+Description:
+Simple example of using pytest and page object pattern.
 
-1. Download 'Marionette executable' https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-macos.tar.gz
-2. Unpack and update 'PATH'
+How to start:
+
+0. Create virtual environment (see: https://docs.python.org/3/library/venv.html)
+1. python setup.py sdist /  python setup.py install
+2. Add path 'geckodriver' into PYTHONPATH
+3. Run test 'pytest tests/test_example.py'
