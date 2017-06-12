@@ -12,9 +12,10 @@ def read_from_file(path):
         return [_.replace('\n', '').split(' ') for _ in infile]
 
 
-def reverse_words(words_list):
+def reverse_words(words_list) -> list:
     """
     Return reversed list of words
+    :param words_list: 
     :rtype : object
     """
     return [reversed(_) for _ in [_ for _ in words_list]]
@@ -22,11 +23,11 @@ def reverse_words(words_list):
 
 if __name__ == "__main__":
     list_of_words = read_from_file(sys.argv[1])
-    n = reverse_words(words_list=list_of_words)
+    words = reverse_words(list_of_words)
     accumulation = ''
-    for i in n:
+    for i in words:
         for j in i:
             accumulation += j + ' '
-        print accumulation
+        print(accumulation)
         accumulation = ''
 
