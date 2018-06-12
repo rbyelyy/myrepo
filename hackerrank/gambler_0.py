@@ -37,22 +37,25 @@ from random import randint
 from typing import List
 
 
-#
-# Gambler emulator
-#
-def dices(number_throughs=None):
-    thoughs = []
+def dices(number_troughs=None) -> list:
+    """
+    Emulate troughs for dices 
+    :rtype: int
+    :param number_troughs: int with number of throughs
+    :return: list of dice results
+    """
+    troughs = []
 
     try:
-        if number_throughs is None:
+        if number_troughs is None:
             for i in range(randint(1, 5)):
-                thoughs.append(randint(1, 6))
+                troughs.append(randint(1, 6))
         else:
-            if number_throughs not in range(1, 6):
+            if number_troughs not in range(1, 6):
                 exit("Out of dice range.")
-            for i in range(number_throughs):
-                thoughs.append(randint(1, 6))
-        return thoughs
+            for i in range(number_troughs):
+                troughs.append(randint(1, 6))
+        return troughs
     except TypeError:
         print("Please use Int as a type of arguments.")
 

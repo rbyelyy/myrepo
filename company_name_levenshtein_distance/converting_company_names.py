@@ -1,9 +1,9 @@
 # coding=utf-8
-import urllib2
-import re
 import csv
 import os
-import sys
+import re
+
+import urllib2
 
 
 def download_nasdaq_company_list(file_name, url):
@@ -68,13 +68,13 @@ def convert_nasdaq_data_to_dict(file_name):
         return res
 
 
-def clean_up_string(str):
+def clean_up_string(strings):
     """
     Remove all non alphabetic and numeric chars from the string. Make string lowercase.
     """
-    str = str.lower()
-    str = re.sub(r'\W+', '', str)
-    return str
+    strings = strings.lower()
+    strings = re.sub(r'\W+', '', strings)
+    return strings
 
 
 def create_clean_csv(mydict):
@@ -82,8 +82,8 @@ def create_clean_csv(mydict):
     Create CSV file with company name and tickers 
     """
     writer = csv.writer(open('create_clean_csv.csv', 'wb'))
-    for key, value in mydict.items():
-        writer.writerow([key, value])
+    for k, v in mydict.items():
+        writer.writerow([k, v])
 
 
 def delete_tmp_file():
